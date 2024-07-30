@@ -1,0 +1,81 @@
+.footer {
+    background-color: #003399;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 60px;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .verified-by img, .social-links img, .zaakpay-logo {
+    width: 50px;
+    margin: 5px;
+    filter: brightness(0) invert(1); /* Make the logos visible on dark background */
+
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .social-links a {
+    margin: 10px 0; /* Vertical spacing between social icons */
+    display: flex;
+    justify-content: center; /* Center icons inside the link */
+  }
+  
+  .social-links .fa-facebook-f, 
+  .social-links .fa-linkedin, 
+  .social-links .fa-twitter, 
+  .social-links .fa-youtube, 
+  .social-links .fa-instagram {
+    color: white; /* Ensure FontAwesome icons are white */
+    font-size: 24px; /* Adjust size as needed */
+  }
+  .ranga{
+    margin-left: 4.5rem;
+  }
+  .verified-by {
+    display: inline-flex;
+    justify-content: space-around; /* Distribute space evenly around items */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Optional: Adjust space between icons */
+  }
+  
+  .verified-by .fa {
+    font-size: 30px; /* Adjust size as needed */
+    color: white; /* Ensure icons are white */
+  }
+  
