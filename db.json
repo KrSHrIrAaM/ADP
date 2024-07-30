@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "d1d7",
+      "name": "Shriraam",
+      "mobileNo": "9945944197",
+      "email": "Shriraamramesh493@gmail.com"
+    },
+    {
+      "id": "9453",
+      "name": "Sage",
+      "mobileNo": "9880534398",
+      "email": "kr.shriraam@gmail.com"
+    },
+    {
+      "id": "c0bf",
+      "name": "Bang Nithilesh",
+      "mobileNo": "8762895565",
+      "email": "Bang@gmail.com"
+    },
+    {
+      "id": "da41",
+      "name": "Shriraam",
+      "mobileNo": "09945944197",
+      "email": "Shriraamramesh493@gmail.com"
+    }
+  ]
+}
