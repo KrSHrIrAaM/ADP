@@ -1,6 +1,6 @@
 .service-container {
   padding: 20px;
-  max-width: 800px;
+  max-width: 1200px; /* Increased the max-width to accommodate larger cards */
   margin: 0 auto;
   font-family: Arial, sans-serif;
   margin-top: 10rem;
@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px; /* Increased gap between the cards */
   margin-top: 20px;
 }
 
@@ -25,11 +25,10 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  width: calc(33.333% - 20px);
+  width: calc(33.333% - 30px); /* Increased width and adjusted for new gap */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s;
   text-align: left;
-  margin-bottom: 20px;
 }
 
 .service-card img {
@@ -51,4 +50,67 @@
 .service-card p {
   font-size: 1em;
   color: #333;
+}
+.globe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%; /* Full width */
+}
+
+.globe-image {
+  max-width: 100%; /* Ensure image fits within container */
+  height: auto;
+  border-radius: 8px; /* Adjust if needed */
+}
+.globe-text {
+  position: absolute; /* Absolute positioning to overlay text on image */
+  color: black;
+  
+  z-index: 1; /* Ensure text is on top of the image */
+  width: 100%;
+  padding: 220px;
+}
+
+.globe-text h2 {
+  font-size: 2em; /* Adjust as needed */
+  margin: 0;
+  padding: 18px;
+}
+.globe-text h1{
+  margin: 0;
+  padding: 0;
+}
+.service-5g {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.service-5g video {
+  max-width: 80%;
+  margin-top: 4rem;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.video-container video {
+  width: calc(25% - 20px); /* Adjust for spacing between videos */
+  height: 390px; /* Fixed height for consistency */
+  border-radius: 8px;
+  object-fit: cover; /* Ensures the video covers the entire card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.video-container video:hover {
+  transform: scale(1.05); /* Optional: scale effect on hover */
 }
