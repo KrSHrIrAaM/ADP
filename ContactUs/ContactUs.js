@@ -1,10 +1,15 @@
-
 import React, { useState } from 'react';
 import './ContactUs.css'; 
+import Chatbot from '../Chatbot/Chatbot'; // Import the chatbot component
+import botImage from '../Assests/bot.png'; // Import the logo image
+import Jiocar from '../Assests/JioCare.mp4';
+import Jioiso from '../Assests/ios.mp4';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+  const [showChatbot, setShowChatbot] = useState(false); // State to manage chatbot visibility
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,7 +17,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
 
     const { name, email, message } = formData;
     if (!name || !email || !message) {
@@ -25,8 +29,13 @@ const ContactUs = () => {
     }
 
     setError('');
+    setSuccess(true);
     console.log('Form Data:', formData);
-    alert('Your message has been sent successfully!');
+    // Optionally, send data to the server here
+  };
+
+  const toggleChatbot = () => {
+    setShowChatbot(!showChatbot);
   };
 
   return (
@@ -42,6 +51,7 @@ const ContactUs = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your Name"
+            aria-required="true"
           />
         </div>
         <div className="form-group">
@@ -53,6 +63,7 @@ const ContactUs = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your Email"
+            aria-required="true"
           />
         </div>
         <div className="form-group">
@@ -63,11 +74,31 @@ const ContactUs = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Your Message"
+            aria-required="true"
           ></textarea>
         </div>
         {error && <p className="error-message">{error}</p>}
+        {success && !error && <p className="success-message">Your message has been sent successfully!</p>}
         <button type="submit" className="contact-button">Send Message</button>
       </form>
+
+      <div className="chatbot-trigger" onClick={toggleChatbot}>
+        <img src={botImage} alt="Chatbot Logo" />
+      </div>
+
+      <Chatbot showChatbot={showChatbot} toggleChatbot={toggleChatbot} /> {/* Pass props to control visibility */}
+
+      {/* Videos section */}
+      <div className="videos-container">
+        <video controls className="video">
+          <source src={Jiocar} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video controls className="video">
+          <source src={Jioiso} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 };
